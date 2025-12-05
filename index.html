@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Hosting Dashboard</title>
+    <style>
+        /* General Body and Container Styles (Dark Theme) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Button Styles */
+        .btn-blue {
+            background-color: #4285F4; /* Google Blue-like */
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: block; /* Make it full width */
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-blue:hover {
+            background-color: #357ae8;
+        }
+
+        /* Upload Links */
+        .upload-link {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #a0a0a0;
+            margin-bottom: 10px;
+        }
+
+        .upload-link span {
+            margin-left: 8px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Code Input Area */
+        .code-area {
+            background-color: #000000;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            height: 200px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #00ff00; /* Hacker-style text color */
+            font-family: 'Courier New', monospace;
+            overflow: hidden; /* Hide scrollbar for clean look */
+        }
+
+        .code-area p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Section Header */
+        h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            color: #ccc;
+            font-weight: normal;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        /* URL Path Input */
+        .url-path-group {
+            display: flex;
+            margin-top: 15px;
+            align-items: center;
+        }
+        
+        .url-prefix {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 6px 0 0 6px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .url-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            background-color: #222;
+            color: white;
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+        }
+
+        /* Final Publish Button */
+        .btn-publish {
+            background-color: #00c853; /* Bright Green */
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 30px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.4);
+        }
+
+        .btn-publish:hover {
+            background-color: #00b349;
+        }
+
+        /* Cancel Button */
+        .btn-cancel {
+            background: none;
+            color: #888;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <button class="btn-blue">Paste Code</button>
+
+        <div class="upload-link">
+            <span class="file-icon">📁</span>
+            <span>Upload .html</span>
+        </div>
+        
+        <div class="upload-link">
+            <span class="file-icon">📦</span>
+            <span>Upload .zip</span>
+        </div>
+
+        <div class="code-area">
+            <p>&lt;html&gt;...&lt;/html&gt;</p>
+        </div>
+
+        <h2>2. Finalize & Publish</h2>
+        
+        <p style="margin-top: 20px; font-size: 14px;">Choose a unique URL path</p>
+        
+        <div class="url-path-group">
+            <div class="url-prefix">.../</div>
+            <input type="text" class="url-input" value="my-awesome-site" placeholder="Enter path here">
+        </div>
+
+        <button class="btn-cancel">Cancel</button>
+
+        <button class="btn-publish">
+            ☁️ Publish Website
+        </button>
+
+    </div>
+
+</body>
+</html>
